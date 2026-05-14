@@ -1,0 +1,39 @@
+{
+  "name": "claude-mcp-code-review-setup",
+  "version": "1.0.0",
+  "description": "Example setup for Claude with MCP, Subagents, and Skills for code review",
+  "main": "index.js",
+  "scripts": {
+    "start": "node mcp-servers/git-mcp.js",
+    "dev": "nodemon mcp-servers/git-mcp.js",
+    "setup": "npm install && echo 'Setup complete! Run: npm start'",
+    "test": "echo 'Add your tests here'"
+  },
+  "keywords": [
+    "claude",
+    "mcp",
+    "model-context-protocol",
+    "code-review",
+    "git",
+    "subagent",
+    "skill"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/claude-mcp-code-review"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/claude-mcp-code-review/issues"
+  }
+}

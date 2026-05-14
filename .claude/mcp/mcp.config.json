@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "git": {
+      "command": "node",
+      "args": ["mcp-servers/git-mcp.js"],
+      "enabled": true,
+      "description": "Git version control MCP server"
+    }
+  },
+  "environment": {
+    "MCP_LOG_LEVEL": "info"
+  }
+}

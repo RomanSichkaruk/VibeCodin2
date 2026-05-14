@@ -1,0 +1,64 @@
+{
+  "name": "git",
+  "description": "Git MCP server for repository management and version control operations",
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "git_get_repo_status",
+      "description": "Get the current status of the repository (modified files, staged changes, etc.)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "repo_path": {
+            "type": "string",
+            "description": "Path to the git repository (defaults to current directory)"
+          }
+        }
+      }
+    },
+    {
+      "name": "git_get_commit_history",
+      "description": "Retrieve commit history for analysis and code review context",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "repo_path": {
+            "type": "string",
+            "description": "Path to the git repository"
+          },
+          "max_commits": {
+            "type": "number",
+            "description": "Maximum number of commits to retrieve",
+            "default": 10
+          },
+          "branch": {
+            "type": "string",
+            "description": "Branch name (defaults to current branch)"
+          }
+        }
+      }
+    },
+    {
+      "name": "git_get_diff",
+      "description": "Get diff between commits or branches for code review",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "repo_path": {
+            "type": "string",
+            "description": "Path to the git repository"
+          },
+          "from_ref": {
+            "type": "string",
+            "description": "Source reference (commit/branch)"
+          },
+          "to_ref": {
+            "type": "string",
+            "description": "Target reference (commit/branch)"
+          }
+        },
+        "required": ["repo_path", "from_ref", "to_ref"]
+      }
+    }
+  ]
+}
